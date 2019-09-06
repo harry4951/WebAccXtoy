@@ -42,16 +42,16 @@ function handleHeartRateMeasurement(heartRateMeasurement) {
     //   degree = -90.0
     // }
     
-    if((previou_degree *  degree) < 0 && (previou_degree > 0) && (degree < 0))
-    {
-      counter++;
-      playSound ('dead');
-    }
-    statusText.innerHTML =  'Accdata: ' + angle.toFixed(2)  + "g <br/>"  + 'Degree: ' +degree.toFixed(2) + '<br/> Hit:' + counter;// + ' &#x2764;'; +  'Rawdata: ' + heartRateMeasurement.heartRate[2]
-    previou_degree = degree;
+    // if((previou_degree *  degree) < 0 && (previou_degree > 0) && (degree < 0))
+    // {
+    //   counter++;
+    //   playSound ('dead');
+    // }
+    statusText.innerHTML =  'Accdata: ' + angle.toFixed(2)  + "g <br/>"  + 'Degree: ' +degree.toFixed(2);// + ' &#x2764;'; +  'Rawdata: ' + heartRateMeasurement.heartRate[2] + '<br/> Hit:' + counter
+    //previou_degree = degree;
     heartRates.push(heartRateMeasurement.heartRate);
     //console.log(heartRates);
-    //drawWaves();
+    drawWaves();
   });
 }
 
