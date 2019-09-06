@@ -52,6 +52,7 @@ function handleHeartRateMeasurement(heartRateMeasurement) {
     heartRates.push(heartRateMeasurement.heartRate);
     //console.log(heartRates);
     drawWaves();
+    //drawWaves();
   });
 }
 
